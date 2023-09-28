@@ -48,8 +48,14 @@ def process_response(message):
 def send_summary_and_thank_you(message):
     chat_id = message.chat.id
     user_info = "\n".join([f"{key}:\n{value}" for key, value in user_data.items()])
-    summary_message = f"Customer responses:\n{user_info}"
-
+    
+    # Get the user's @username if available
+    user_username = message.from_user.username
+    if user_username:
+        summary_message = f"@{user_username}'s responses:\n{user_info}"
+    else:
+        summary_message = f"User's responses:\n{user_info}"
+    
     # Send the summary to your personal Telegram account
     bot.send_message(YOUR_CHAT_ID, summary_message, parse_mode='Markdown')
 
