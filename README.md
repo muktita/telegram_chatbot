@@ -19,5 +19,9 @@ This Telegram chatbot is designed to enhance customer service by automatically f
    pip install -r requirements.txt
 3. ```bash
    BOT_TOKEN=your_bot_token_here
+## Use
+```bash
+python bot.py
+
 
 
