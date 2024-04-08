@@ -20,8 +20,6 @@ This Telegram chatbot is designed to enhance customer service by automatically f
 3. ```bash
    BOT_TOKEN=your_bot_token_here
 ## Use
+1. To run
 ```bash
 python bot.py
-
-
-
